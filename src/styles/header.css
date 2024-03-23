@@ -1,0 +1,47 @@
+.header {
+    position: absolute;
+    max-width: 1440px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    background: none;
+    backdrop-filter: blur(10px);
+    z-index: 20;
+    transition: .2s ease;
+    h1 {
+        background: linear-gradient(60deg,coral,violet);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    nav {
+        display: flex;
+        gap: 15px;
+        a {
+            font-size: 18px;
+            text-decoration-color: var(--text-decoration-color-1);
+            &:hover,
+            &:focus {
+                color: var(--text-color-3);
+                text-decoration-color: var(--text-decoration-color-2);
+            }
+        }
+    }
+}
+.burger-menu-button {
+    @media (width >= 768px) {
+        display: none;
+    }
+}
+.header.scrolled {
+    position: fixed;
+    background: var(--bg-color-4);
+}

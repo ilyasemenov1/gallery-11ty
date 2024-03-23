@@ -1,0 +1,17 @@
+<header class="header">
+    <div class="header__content">
+        <h1>
+            <a href="{{ header.label.url }}">
+                <i>#</i>Галерейка
+            </a>
+        </h1>
+        <nav>
+            {% for item in header.dates %}
+                <a href="{{ item.url }}">{{ item.label }}</a>
+            {% endfor %}
+        </nav>
+        <button class="burger-menu-button">
+            <span class="burger-menu-button__burger"></span>
+        </button>
+    </div>
+</header>

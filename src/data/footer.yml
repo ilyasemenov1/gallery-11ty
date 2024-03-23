@@ -1,0 +1,16 @@
+social:
+  title: Мои соц. сети
+  list: 
+    - title: GitHub
+      url: /
+    - title: GitLab
+      url: /
+    - title: Telegram
+      url: /
+
+credits:
+  list:
+  - title: Сделано мной
+    url: https://si1ogdev.ru/
+  - title: Собрано на 11ty
+    url: https://www.11ty.dev/

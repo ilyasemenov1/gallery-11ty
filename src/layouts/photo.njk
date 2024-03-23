@@ -1,0 +1,24 @@
+---
+layout: page.njk
+---
+{% set isDesc = description %}
+<div class="image-info">
+    <div class="image-info__image-conteiner">
+        <div class="image-info__image-preload-conteiner" style="aspect-ratio: {{ aspect_ratio }};">
+            <img src="{{ 'images/' + name }}" alt="{{ description }}" calss="image-info__image">
+        </div>
+    </div>
+    <div class="image-info-content">
+        <ul class="tags">
+            {% for item in tags %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        {% for item in info %}
+            <div class="image-info-content__row">
+                <h3 class="image-info-content__topic">{{ item.title }}</h3>
+                <span>{{ item.value }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</div>

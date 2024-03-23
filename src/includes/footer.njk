@@ -1,0 +1,16 @@
+<footer class="footer">
+    <ul class="footer__side">
+        {% for item in footer.social.list %}
+            <li>
+                <a class="footer__link" href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <ul class="footer__side">
+        {% for item in footer.credits.list %}
+            <li>
+                <a class="footer__link" href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</footer>
