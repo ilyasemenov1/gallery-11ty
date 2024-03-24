@@ -1,0 +1,22 @@
+name: img.jpg
+tags: 
+- Архитектура
+- Материалы
+info:
+- title: Год
+  value: 2023
+- title: Камера
+  value: Canon PowerShot G9
+- title: Разрешение
+  value: 2248X4000
+- title: DPI
+  value: 180
+- title: Фокусное расстояние
+  value: 29.17мм
+- title: Выдержка
+  value: 1/80сек
+- title: ISO
+  value: 400
+aspect_ratio: 9/16
+description: ''
+layout: photo.njk

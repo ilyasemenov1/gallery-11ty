@@ -9,16 +9,18 @@ layout: page.njk
         </div>
     </div>
     <div class="image-info-content">
-        <ul class="tags">
-            {% for item in tags %}
-                <li>{{ item }}</li>
+        <div class="image-info-content__info">
+            <ul class="tags">
+                {% for item in tags %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            {% for item in info %}
+                <div class="image-info-content__row">
+                    <h3 class="image-info-content__topic">{{ item.title }}</h3>
+                    <span>{{ item.value }}</span>
+                </div>
             {% endfor %}
-        </ul>
-        {% for item in info %}
-            <div class="image-info-content__row">
-                <h3 class="image-info-content__topic">{{ item.title }}</h3>
-                <span>{{ item.value }}</span>
-            </div>
-        {% endfor %}
+        </div>
     </div>
 </div>
