@@ -1,26 +1,31 @@
 ---
 layout: page.njk
 ---
-{% set isDesc = description %}
 <div class="image-info">
     <div class="image-info__image-conteiner">
         <div class="image-info__image-preload-conteiner" style="aspect-ratio: {{ aspect_ratio }};">
             <img src="{{ 'images/' + name }}" alt="{{ description }}" calss="image-info__image">
             <div class="image-info-actions">
-                <a href="{{ 'images/' + name }}" class="image-info-actions__link" download="">
-                    <svg width="20" height="20" aria-hidden="true">
-                        <use href="/svg/icons.svg#download" />
-                    </svg>
+                <a href="{{ 'images/' + name }}" class="image-info-actions__link element--hover-1" download="">
+                    <div class="image-info-actions__icon">
+                        <svg width="20" height="20" aria-hidden="true">
+                            <use href="/svg/icons.svg#download" />
+                        </svg>
+                    </div>
+                    <span>Скачать</span>
                 </a>
-                <a href="{{ 'images/' + name }}" class="image-info-actions__link" target="blank">
-                    <svg width="20" height="20" aria-hidden="true">
-                        <use href="/svg/icons.svg#open-full" />
-                    </svg>
+                <a href="{{ 'images/' + name }}" class="image-info-actions__link element--hover-1" target="blank">
+                    <div class="image-info-actions__icon">
+                        <svg width="20" height="20" aria-hidden="true">
+                            <use href="/svg/icons.svg#open-full" />
+                        </svg>
+                    </div>
+                    <span>Открыть в новой вкладке</span>
                 </a>
             </div>
         </div>
     </div>
-    <div class="image-info-content">
+    <div class="image-info-content {{ 'short' if aspect_ratio == '9/16' }}">
         <div class="image-info-content__info">
             <ul class="tags">
                 {% for item in tags %}
