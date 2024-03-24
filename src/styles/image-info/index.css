@@ -13,6 +13,7 @@
     height: 100%;
 }
 .image-info__image-preload-conteiner {
+    position: relative;
     overflow: hidden;
     border-radius: 20px;
     background: var(--bg-color-4);
@@ -59,4 +60,34 @@
     width: fit-content;
     padding: 15px 10px;
     background: var(--bg-color-4);
+}
+.image-info-actions {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    padding: 10px 15px;
+    background: var(--bg-color-1);
+    border-radius: 0 20px 0 0;
+    z-index: 1;
+    a {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--text-color-1);
+    }
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        stroke: var(--bg-color-1);
+    }
+}
+.last-images {
+    margin: 20px 0 0 0;
+    h1 {
+        font-size: 25px;
+    }
 }

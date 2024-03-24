@@ -6,6 +6,18 @@ layout: page.njk
     <div class="image-info__image-conteiner">
         <div class="image-info__image-preload-conteiner" style="aspect-ratio: {{ aspect_ratio }};">
             <img src="{{ 'images/' + name }}" alt="{{ description }}" calss="image-info__image">
+            <div class="image-info-actions">
+                <a href="{{ 'images/' + name }}" class="image-info-actions__link" download="">
+                    <svg width="20" height="20" aria-hidden="true">
+                        <use href="/svg/icons.svg#download" />
+                    </svg>
+                </a>
+                <a href="{{ 'images/' + name }}" class="image-info-actions__link" target="blank">
+                    <svg width="20" height="20" aria-hidden="true">
+                        <use href="/svg/icons.svg#open-full" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
     <div class="image-info-content">
@@ -24,3 +36,6 @@ layout: page.njk
         </div>
     </div>
 </div>
+<section class="last-images">
+    <h1>Посделние фотографии</h1>
+</section>

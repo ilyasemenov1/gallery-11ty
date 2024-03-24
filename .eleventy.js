@@ -145,6 +145,7 @@ module.exports = (config) => {
 		'src/images',
 		'src/fonts',
 		'src/photos/**/*.!(md|yml)',
+		'src/svg'
 	].forEach((path) => config.addPassthroughCopy(path));
 
 	// Images
