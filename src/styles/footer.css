@@ -25,16 +25,4 @@
             font-size: 18px;
         }
     }
-    a {
-        display: inline;
-        color: inherit;
-        font-size: 17px;
-        text-decoration: underline;
-        text-decoration-color: var(--text-decoration-color-1);
-        &:hover,
-        &:focus {
-            color: var(--text-color-3);
-            text-decoration-color: var(--text-decoration-color-2);
-        }
-    }
 }

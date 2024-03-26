@@ -1,9 +1,16 @@
+
+{% from 'link.njk' import link %}
+
 <footer class="footer">
     <ul class="footer__side">
         {% for item in footer.social.list %}
-            <li>
-                <a class="footer__link" href="{{ item.url }}">{{ item.title }}</a>
-            </li>
+            {{ link({ 
+                text: item.title,
+                url: item.url,
+                icon_id: item.icon_id,
+                blank: true,
+                no_stroke: true
+             }) }}
         {% endfor %}
     </ul>
     <ul class="footer__side">

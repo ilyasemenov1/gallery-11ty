@@ -3,14 +3,28 @@ social:
   list: 
     - title: GitHub
       url: /
+      icon_id: github
+      no_stroke: true
     - title: GitLab
       url: /
+      icon_id: gitlab
+      no_stroke: true
     - title: Telegram
       url: /
+      icon_id: telegram
+      no_stroke: true
+    - title: CodePen
+      url: /
+      icon_id: codepen
+      no_stroke: true
 
 credits:
   list:
   - title: Сделано мной
     url: https://si1ogdev.ru/
+    icon_id: self-made
+    no_stroke: true
   - title: Собрано на 11ty
     url: https://www.11ty.dev/
+    icon_id: eleventy
+    no_stroke: true
