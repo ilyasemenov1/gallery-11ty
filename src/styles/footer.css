@@ -26,3 +26,8 @@
         }
     }
 }
+.id--eleventy svg,
+.id--gitlab svg  {
+    width: 26px;
+    height: 26px;
+}

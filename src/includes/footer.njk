@@ -15,9 +15,14 @@
     </ul>
     <ul class="footer__side">
         {% for item in footer.credits.list %}
-            <li>
-                <a class="footer__link" href="{{ item.url }}">{{ item.title }}</a>
-            </li>
+            {{ link({ 
+                text: item.title,
+                url: item.url,
+                icon_id: item.icon_id,
+                blank: true,
+                no_stroke: item.no_stroke,
+                no_icon: item.no_icon
+             }) }}
         {% endfor %}
     </ul>
 </footer>

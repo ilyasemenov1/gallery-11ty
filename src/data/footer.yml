@@ -2,29 +2,31 @@ social:
   title: Мои соц. сети
   list: 
     - title: GitHub
-      url: /
+      url: https://github.com/ilyasemenov1
       icon_id: github
       no_stroke: true
     - title: GitLab
-      url: /
+      url: https://gitlab.com/si1og
       icon_id: gitlab
       no_stroke: true
     - title: Telegram
-      url: /
+      url: https://t.me/si1og
       icon_id: telegram
       no_stroke: true
     - title: CodePen
-      url: /
+      url: https://codepen.io/ilyasemenov1
       icon_id: codepen
       no_stroke: true
 
 credits:
   list:
   - title: Сделано мной
-    url: https://si1ogdev.ru/
-    icon_id: self-made
+    url: https://github.com/ilyasemenov1/gallery-11ty
+    icon_id: github
     no_stroke: true
+    no_icon: false
   - title: Собрано на 11ty
     url: https://www.11ty.dev/
     icon_id: eleventy
-    no_stroke: true
+    no_stroke: false
+    no_icon: false
