@@ -34,14 +34,20 @@
                 text-decoration-color: var(--text-decoration-color-2);
             }
         }
+        @media (width <= 768px ) {
+            display: none;
+        }
     }
 }
 .burger-menu-button {
-    @media (width >= 768px) {
+    @media (width > 768px) {
         display: none;
     }
 }
 .header.scrolled {
     position: fixed;
     background: var(--bg-color-4);
+    h1 {
+        font-size: 22px;
+    }
 }

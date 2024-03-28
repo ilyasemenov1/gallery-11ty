@@ -32,12 +32,14 @@ layout: page.njk
                     <li>{{ item }}</li>
                 {% endfor %}
             </ul>
-            {% for item in info %}
-                <div class="image-info-content__row">
-                    <h3 class="image-info-content__topic">{{ item.title }}</h3>
-                    <span>{{ item.value }}</span>
-                </div>
-            {% endfor %}
+            <div>
+                {% for item in info %}
+                    <div class="image-info-content__row">
+                        <h3 class="image-info-content__topic">{{ item.title }}</h3>
+                        <span>{{ item.value }}</span>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
