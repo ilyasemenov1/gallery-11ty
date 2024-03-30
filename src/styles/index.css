@@ -5,6 +5,7 @@
 @import url('./main.css');
 @import url('./footer.css');
 @import url('./image-info/index.css');
+@import url('./global/animations.css');
 
 /* Hovers */
 @import url('./global/hovers.css');

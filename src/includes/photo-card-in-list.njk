@@ -1,0 +1,8 @@
+{% macro photoCardInList(photo, index) %}
+    {% set data = photo.data %}
+    <div class="photo-card-in-list {{ 'small' if index % 2 == 1 and index % 3 != 0 }} {{ 'med' if index % 2 == 0 and index % 3 != 0 }} {{ 'large' if index % 3 == 0 }}  {{ 'landscape' if data.aspect_ratio == '16/9' }}">
+        <div class="photo-card-in-list__photo--conteiner" style="aspect-ratio: {{ data.aspect_ratio }}">
+            <img src="{{ photo.url }}images/{{ data.name }}" alt="{{ data.description }}" class="photo-card-in-list__photo">
+        </div>
+    </div>
+{% endmacro %}

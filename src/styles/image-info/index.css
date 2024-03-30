@@ -85,6 +85,7 @@
     position: absolute;
     bottom: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     width: fit-content;
     padding: 10px 15px;
@@ -134,5 +135,43 @@
     margin: 20px 0 0 0;
     h1 {
         font-size: 25px;
+    }
+}
+.photo-cards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+    grid-auto-rows: 10px;
+    justify-content: center;
+}
+.photo-card-in-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px #00000015;
+    background: var(--bg-color-2);
+    color: var(--text-color-1);
+    overflow: hidden;
+    box-sizing: border-box;
+    &.small {
+        grid-row-end: span 45;
+    }
+    &.med {
+        grid-row-end: span 55;
+    }
+    &.large {
+        grid-row-end: span 65;
+    }
+    &.landscape {
+        &.small {
+            grid-row-end: span 23;
+        }
+        &.med {
+            grid-row-end: span 26;
+        }
+        &.large {
+            grid-row-end: span 29;
+        }
     }
 }

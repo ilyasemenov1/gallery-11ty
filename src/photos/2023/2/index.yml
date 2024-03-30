@@ -17,6 +17,6 @@ info:
   value: 1/80сек
 - title: ISO
   value: 200
-aspect_ratio: 16/9
+aspect_ratio: '16/9'
 description: ''
 layout: photo.njk

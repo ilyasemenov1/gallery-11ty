@@ -15,7 +15,7 @@ module.exports = (config) => {
     // Collections
 
 	const collections = {
-		photos: 'src/photos/*',
+		photos: 'src/photos/**/*/index.md',
 		pages: 'src/pages/!(404)/index.njk',
 	}
 

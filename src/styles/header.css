@@ -4,7 +4,7 @@
     width: 100%;
     padding: 20px;
     border-radius: 0 0 20px 20px;
-    background: none;
+    background: inherit;
     backdrop-filter: blur(10px);
     z-index: 20;
     transition: .2s ease;
@@ -47,6 +47,7 @@
 .header.scrolled {
     position: fixed;
     background: var(--bg-color-4);
+    animation: addHeader .2s ease forwards;
     h1 {
         font-size: 22px;
     }

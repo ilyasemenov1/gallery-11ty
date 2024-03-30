@@ -1,6 +1,9 @@
 ---
 layout: page.njk
 ---
+
+{% from 'photo-card-list.njk' import photoCardList %}
+
 <div class="image-info">
     <div class="image-info__image-conteiner">
         <div class="image-info__image-preload-conteiner" style="aspect-ratio: {{ aspect_ratio }};">
@@ -45,4 +48,5 @@ layout: page.njk
 </div>
 <section class="last-images">
     <h1>Посделние фотографии</h1>
+    {{ photoCardList(collections.photos | reverse, 10) }}
 </section>
