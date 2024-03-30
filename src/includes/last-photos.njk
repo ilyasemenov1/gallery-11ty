@@ -1,0 +1,15 @@
+{% from 'photo-card-list.njk' import photoCardList %}
+
+<section class="last-images">
+    <h1 class="last-images__label">
+        <span>Посделние фотографии</span>
+        <span class="last-images__counter">
+            {% if collections.photos.length <= 15 %}
+                {{ collections.photos.length }}
+            {% else %}
+                15 из {{ collections.photos.length }}
+            {% endif %}
+        </span>
+    </h1>
+    {{ photoCardList(collections.photos | reverse, 15) }}
+</section>
