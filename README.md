@@ -1,1 +1,1 @@
-﻿# My gallery powered py 11ty
+﻿# My gallery powered by 11ty

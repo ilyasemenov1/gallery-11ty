@@ -167,8 +167,8 @@ module.exports = (config) => {
 		const imageMetadata = await Image(src, {
 		  widths: [...widths, null],
 		  formats: [...formats, null],
-		  outputDir: 'dist/images/**',
-		  urlPath: '/images/**',
+		  outputDir: 'dist/**/*',
+		  urlPath: '/images/**/*.{png,jpg,jpeg}',
 		});
 	  
 		const imageAttributes = {
