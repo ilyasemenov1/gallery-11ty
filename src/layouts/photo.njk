@@ -1,6 +1,9 @@
 ---
 layout: page.njk
 ---
+
+{% from 'image-waterfall.njk' import imageWaterfall %}
+
 <div class="image-info">
     <div class="image-info__image-conteiner">
         <div class="image-info__image-preload-conteiner" style="aspect-ratio: {{ aspect_ratio }};">
@@ -43,4 +46,8 @@ layout: page.njk
         </div>
     </div>
 </div>
-{% include 'last-photos.njk' %}
+{{ imageWaterfall({
+    collection: collections.photos,
+    label: 'Последние фотографии',
+    max_images: 15
+}) }}

@@ -1,3 +1,7 @@
-<main class="main">
-    {% include 'last-photos.njk' %}
-</main>
+{% from 'image-waterfall.njk' import imageWaterfall %}
+{{ imageWaterfall({
+    collection: collections.photos,
+    label: 'Последние фотографии',
+    max_images: 15,
+    no_margin: true
+}) }}
