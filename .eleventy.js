@@ -16,12 +16,18 @@ module.exports = (config) => {
 
 	const collections = {
 		photos: 'src/photos/**/*/index.md',
+		photos_2022: 'src/photos/2022/*/index.md',
+		photos_2023: 'src/photos/2023/*/index.md',
+		photos_2024: 'src/photos/2024/*/index.md',
 		pages: 'src/pages/!(404)/index.njk',
 	}
-
-    config.addCollection('photos', (collectionApi) => {
-        return collectionApi.getFilteredByGlob(collections.photos);
-    })
+	
+	let collectionsEntries = Object.entries(collections)
+	collectionsEntries.forEach(element => {
+		config.addCollection(element[0], (collectionApi) => {
+			return collectionApi.getFilteredByGlob(collections[element[0]]);
+		})
+	})
 
     // Md
 

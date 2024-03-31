@@ -1,0 +1,7 @@
+{% from 'image-waterfall.njk' import imageWaterfall %}
+{{ imageWaterfall({
+    collection: collections.photos_2024,
+    label: '2024',
+    max_images: 1000000,
+    no_margin: true
+}) }}
