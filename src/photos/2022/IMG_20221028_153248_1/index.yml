@@ -1,0 +1,21 @@
+aspect_ratio: 578/325
+date: '2022-10-28'
+description: ''
+ex: jpg
+info:
+- title: "\u0413\u043E\u0434"
+  value: '2022'
+- title: "\u041A\u0430\u043C\u0435\u0440\u0430"
+  value: Redmi Note 8 Pro
+- title: "\u0420\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435"
+  value: 4624x2600
+- title: "\u0412\u044B\u0434\u0435\u0440\u0436\u043A\u0430"
+  value: 1200983919830145/72057594037927936
+- title: <i>f<i/>
+  value: <i>f<i/>/1.89
+- title: ISO
+  value: 100
+layout: photo.njk
+name: IMG_20221028_153248_1
+orientation: landscape
+time: '15:32:49'

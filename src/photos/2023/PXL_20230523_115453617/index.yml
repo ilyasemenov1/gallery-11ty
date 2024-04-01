@@ -1,0 +1,21 @@
+aspect_ratio: 9/16
+date: '2023-05-23'
+description: ''
+ex: jpg
+info:
+- title: "\u0413\u043E\u0434"
+  value: '2023'
+- title: "\u041A\u0430\u043C\u0435\u0440\u0430"
+  value: Pixel 6a
+- title: "\u0420\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435"
+  value: 2268x4032
+- title: "\u0412\u044B\u0434\u0435\u0440\u0436\u043A\u0430"
+  value: 6308786473208667/36893488147419103232
+- title: <i>f<i/>
+  value: <i>f<i/>/1.73
+- title: ISO
+  value: 53
+layout: photo.njk
+name: PXL_20230523_115453617
+orientation: portrait
+time: '14:54:53'

@@ -7,9 +7,9 @@ layout: page.njk
 <div class="image-info">
     <div class="image-info__image-conteiner">
         <div class="image-info__image-preload-conteiner" style="aspect-ratio: {{ aspect_ratio }};">
-            <img src="{{ 'images/' + name }}" alt="{{ description }}" calss="image-info__image">
+            <img src="images/{{ name }}_medium.{{ ex }}" alt="{{ description }}" calss="image-info__image">
             <div class="image-info-actions">
-                <a href="{{ 'images/' + name }}" class="image-info-actions__link element--hover-1" download="">
+                <a href="images/{{ name }}.{{ ex }}" class="image-info-actions__link element--hover-1" download="">
                     <div class="image-info-actions__icon">
                         <svg width="20" height="20" aria-hidden="true">
                             <use href="/svg/icons.svg#download" />
@@ -17,7 +17,7 @@ layout: page.njk
                     </div>
                     <span>Скачать</span>
                 </a>
-                <a href="{{ 'images/' + name }}" class="image-info-actions__link element--hover-1" target="blank">
+                <a href="images/{{ name }}.{{ ex }}" class="image-info-actions__link element--hover-1" target="blank">
                     <div class="image-info-actions__icon">
                         <svg width="20" height="20" aria-hidden="true">
                             <use href="/svg/icons.svg#open-full" />

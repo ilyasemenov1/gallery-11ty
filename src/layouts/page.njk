@@ -43,16 +43,59 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@pepelsbey_dev"> #}
 
-	{# <style media="(prefers-color-scheme: light)">
-		{{ 'src/styles/light.css' | css }}
-	</style>
-	<style media="(prefers-color-scheme: dark)">
-		{{ 'src/styles/dark.css' | css }}
-	</style> #}
-
 	{# <link rel="alternate" type="application/rss+xml" href="{{ global.domain }}/feed/" title="{{ global.title }}"> #}
 
 	<script defer src="/scripts/index.js"></script>
+	<script>
+		function getAutoTheme() {
+			if (window.matchMedia && 
+				window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.documentElement.classList.add("dark-theme");
+					return "active";
+				} else {
+					document.documentElement.classList.remove("dark-theme");
+					return "disactive";
+				}
+		}
+
+		function getUserTheme() {
+			const theme = JSON.parse(localStorage.getItem("theme"));
+
+			if (!isNaN(theme)) {
+
+				localStorage.setItem("theme", JSON.stringify("sys"));
+				//userTheme = getAutoTheme();
+				//setUpMode("sys", userTheme);
+				return;
+			}
+
+			switch(theme) {
+				case "active":
+					document.documentElement.classList.add("dark-theme");
+					setUpMode(theme);
+					break
+				case "sys":
+					//userTheme = getAutoTheme();
+					//setUpMode(theme, userTheme);
+					break
+				case "disactive":
+					document.documentElement.classList.remove("dark-theme");
+					//setUpMode(theme);
+					break
+				default:
+					getAutoTheme();
+					localStorage.setItem("theme", JSON.stringify("sys"));
+
+					setUpMode("sys");
+			}
+		}
+
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+			getAutoTheme();
+		});
+
+		getUserTheme();
+	</script>
 	{# <script defer src="https://cdn.usefathom.com/script.js" data-site="AQPFXSVA"></script> #}
 </head>
 <body class="page__body">
