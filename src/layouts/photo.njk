@@ -3,11 +3,19 @@ layout: page.njk
 ---
 
 {% from 'image-waterfall.njk' import imageWaterfall %}
+{% from 'image.njk' import image %}
 
 <div class="image-info">
     <div class="image-info__image-conteiner">
         <div class="image-info__image-preload-conteiner" style="aspect-ratio: {{ aspect_ratio }};">
-            <img src="images/{{ name }}_medium.{{ ex }}" alt="{{ description }}" calss="image-info__image">
+            {{ image(
+                src='images/' + name + '.' + ex,
+                desc=description,
+                source_list=[
+                    'images/' + name + '_medium.' + ex
+                ],
+                class='image-info__image'
+            ) }}
             <div class="image-info-actions">
                 <a href="images/{{ name }}.{{ ex }}" class="image-info-actions__link element--hover-1" download="">
                     <div class="image-info-actions__icon">

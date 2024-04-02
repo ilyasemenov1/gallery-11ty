@@ -1,8 +1,16 @@
 {% macro photoCardInList(photo, index) %}
+    {% from 'image.njk' import image %}
     {% set data = photo.data %}
     <div class="photo-card-in-list {{ 'small' if index % 2 == 1 and index % 3 != 0 }} {{ 'med' if index % 2 == 0 and index % 3 != 0 }} {{ 'large' if index % 3 == 0 }}  {{ data.orientation }}">
         <a class="photo-card-in-list__photo-link" href="{{ photo.url }}" style="aspect-ratio: {{ data.aspect_ratio }}">
-            <img src="{{ photo.url }}images/{{ data.name }}_small.{{ data.ex }}" alt="{{ data.description }}" class="photo-card-in-list__photo">
+            {{ image(
+                src=photo.url + 'images/' + data.name + '.' + data.ex,
+                desc=data.description,
+                source_list=[
+                    photo.url + 'images/' + data.name + '_small.' + data.ex
+                ],
+                class='photo-card-in-list__photo'
+            ) }}
         </a>
     </div>
 {% endmacro %}
