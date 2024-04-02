@@ -14,7 +14,8 @@ layout: page.njk
                 source_list=[
                     'images/' + name + '_medium.' + ex
                 ],
-                class='image-info__image'
+                class='image-info__image',
+                allow_preload=false
             ) }}
             <div class="image-info-actions">
                 <a href="images/{{ name }}.{{ ex }}" class="image-info-actions__link element--hover-1" download="">
