@@ -10,9 +10,9 @@ info:
 - title: "\u0420\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435"
   value: 4624x2600
 - title: "\u0412\u044B\u0434\u0435\u0440\u0436\u043A\u0430"
-  value: 1200983919830145/72057594037927936
-- title: <i>f<i/>
-  value: <i>f<i/>/1.89
+  value: 1/60
+- title: "\u0410\u043F\u0435\u0440\u0442\u0443\u0440\u0430"
+  value: f/1.89
 - title: ISO
   value: 100
 layout: photo.njk

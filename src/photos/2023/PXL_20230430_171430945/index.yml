@@ -9,10 +9,12 @@ info:
   value: Pixel 6a
 - title: "\u0420\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435"
   value: 4032x2268
+- title: DPI
+  value: 72
 - title: "\u0412\u044B\u0434\u0435\u0440\u0436\u043A\u0430"
-  value: 986900807943461/2305843009213693952
-- title: <i>f<i/>
-  value: <i>f<i/>/1.73
+  value: 2/4673
+- title: "\u0410\u043F\u0435\u0440\u0442\u0443\u0440\u0430"
+  value: f/1.73
 - title: ISO
   value: 54
 layout: photo.njk
