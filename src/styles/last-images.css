@@ -51,7 +51,7 @@
     margin: 15px 10px;
     border-radius: 20px;
     box-shadow: 0 4px 12px #00000015;
-background: var(--bg-color-2);
+    background: var(--bg-color-2);
     color: var(--text-color-1);
     overflow: hidden;
     box-sizing: border-box;
@@ -70,7 +70,8 @@ background: var(--bg-color-2);
         right: 12px;
         top: 12px;
         border-radius: 50%;
-        background: var(--bg-color-1);
+        background: var(--bg-color-4);
+        backdrop-filter: blur(15px);
         box-shadow: 0 4px 12px #0000002c;
         opacity: 0;
         pointer-events: none;

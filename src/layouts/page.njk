@@ -163,6 +163,9 @@
 		});
 
 		getUserTheme();
+		window.addEventListener('DOMContentLoaded', () => {
+			setButtonSwitcherMode(getUserThemeValue());
+		})
 		window.addEventListener('load', () => {
 			delay(0)
 			.then(() => {
