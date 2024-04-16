@@ -60,6 +60,10 @@
 
 		// User theme
 
+		function delay(t, val) {
+			return new Promise(resolve => setTimeout(resolve, t, val));
+		}
+
 		const themeSwitcherButtons = document.querySelectorAll('.theme-switcher__button')
 		const themeSwitcherMarker = document.querySelector('.theme-switcher__marker')
 		const themeSwitcher = document.querySelector('.theme-switcher')
@@ -160,9 +164,15 @@
 
 		getUserTheme();
 		window.addEventListener('load', () => {
-			setTimeout(() => {
-				setButtonSwitcherMode(getUserThemeValue())
-			}, 20)
+			delay(0)
+			.then(() => {
+				setButtonSwitcherMode(getUserThemeValue());
+			})
+			.then(() => {
+				setTimeout(() => {
+					themeSwitcher.classList.add('animations-on');
+				}, 20)
+			})
 		})
 
 		// Lazy loading
