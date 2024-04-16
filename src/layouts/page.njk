@@ -60,14 +60,47 @@
 
 		// User theme
 
+		const themeSwitcherButtons = document.querySelectorAll('.theme-switcher__button')
+		const themeSwitcherMarker = document.querySelector('.theme-switcher__marker')
+		const themeSwitcher = document.querySelector('.theme-switcher')
+
+		themeSwitcherButtons.forEach(element => {
+			element.addEventListener('click', () => {
+				let buttonData = element.dataset.action;
+				setUserTheme(buttonData)
+			})
+		})
+
+		function setButtonSwitcherMode(theme) {
+			const themeSwitcherButton = document.getElementById(`theme-${theme}`)
+
+			themeSwitcherButtons.forEach(element => {
+				element.classList.remove('active')
+			})
+			
+			themeSwitcherButton.classList.add('active')
+
+			const buttonRect = themeSwitcherButton.getBoundingClientRect()
+			const buttonLeft = buttonRect.x
+			const buttonTop = buttonRect.y
+			const buttonWidth = buttonRect.width
+			const buttonHeight = buttonRect.height
+
+			const conteinerRect = themeSwitcher.getBoundingClientRect()
+			const conteinerLeft = conteinerRect.x
+			const conteinerTop = conteinerRect.y
+
+			themeSwitcherMarker.style = `width: ${buttonWidth}px; height: ${buttonHeight}px; transform: translate(${buttonLeft - conteinerLeft}px, ${buttonTop - conteinerTop}px);`
+		}
+
 		function getAutoTheme() {
 			if (window.matchMedia && 
 				window.matchMedia('(prefers-color-scheme: dark)').matches) {
 					document.documentElement.classList.add("dark-theme");
-					return "active";
+					return "dark";
 				} else {
 					document.documentElement.classList.remove("dark-theme");
-					return "disactive";
+					return "light";
 				}
 		}
 
@@ -77,29 +110,47 @@
 			if (!isNaN(theme)) {
 
 				localStorage.setItem("theme", JSON.stringify("sys"));
-				//userTheme = getAutoTheme();
-				//setUpMode("sys", userTheme);
+				getAutoTheme();
+				setUserTheme('sys');
 				return;
 			}
 
+			setUserTheme(theme)
+		}
+
+		function getUserThemeValue() {
+			const theme = JSON.parse(localStorage.getItem("theme"));
+
+			if (!isNaN(theme)) {
+
+				localStorage.setItem("theme", JSON.stringify("sys"));
+				return 'sys';
+			}
+
+			return theme;
+		}
+
+
+		function setUserTheme(theme) {
+			if (theme) localStorage.setItem("theme", JSON.stringify(theme));
 			switch(theme) {
-				case "active":
+				case "dark":
 					document.documentElement.classList.add("dark-theme");
-					setUpMode(theme);
+					setButtonSwitcherMode(theme);
 					break
 				case "sys":
-					//userTheme = getAutoTheme();
-					//setUpMode(theme, userTheme);
+					getAutoTheme();
+					setButtonSwitcherMode('sys');
 					break
-				case "disactive":
+				case "light":
 					document.documentElement.classList.remove("dark-theme");
-					//setUpMode(theme);
+					setButtonSwitcherMode(theme);
 					break
 				default:
 					getAutoTheme();
 					localStorage.setItem("theme", JSON.stringify("sys"));
 
-					setUpMode("sys");
+					setButtonSwitcherMode("sys");
 			}
 		}
 
@@ -108,6 +159,11 @@
 		});
 
 		getUserTheme();
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				setButtonSwitcherMode(getUserThemeValue())
+			}, 20)
+		})
 
 		// Lazy loading
 
